@@ -1,14 +1,15 @@
-const express = require('express')
-const methodOverride = require('method-override')
+const express = require('express');
+const app = express();
 
-const app = express() 
+const methodOverride = require('method-override');
+
 const port = process.env.PORT
 
-
-
-
 //Para indicarle express la carpeta donde se encuentran los archivos estáticos
+// Necesitamos indicarle a Express que todo lo que está en la capeta public
+// es contenido estático, es decir que no pasa por el sistema de rutas
 app.use(express.static('public'));
+
 //Debemos indicar cual es el motor de plantillas que estamos usando EJS
 app.set('view engine', 'ejs')
 
