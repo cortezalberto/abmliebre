@@ -1,6 +1,6 @@
 let visitados = require('../data/datosProductos')
 
-//const homeRouter = require('../routes/homeRouter')
+const homeRouter = require('../routes/homeRouter')
 
 
 
