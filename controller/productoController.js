@@ -123,13 +123,23 @@ let productController = {
 
 
     destroy: (req, res) => {
-        //     console.log('entre destroy')
-        //    console.log(req.body)
+            console.log('entre destroy')
+           console.log(req.params.id)
 
         // borrar en visitados
         // borrar por el ID buscando (req.params.id)
+        let menorArray = visitados.filter(function (value) {
+           
+            return value.id !== req.params.id
+        })
+        console.log('-------ARRAY NUEVO MENOR')
+        console.log(menorArray)
+     
+        
 
-
+        visitados = [...menorArray]
+        console.log('----------ARRAY VISITADOS')
+        console.log(visitados)
         res.redirect('/')
     },
 
