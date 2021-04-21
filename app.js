@@ -18,7 +18,7 @@ app.use(express.static('public'));
 // configuro EJS
 app.set('view engine', 'ejs')
 
-//app.use(methodOverride('_method'))
+app.use(methodOverride('_method'))
 
 
 // llamo al ruteo
